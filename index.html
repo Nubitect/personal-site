@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Resume, cyber competitions and projects.">
+  <link rel="stylesheet" href="style.css">
+  <script src="content.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="logo" aria-hidden="true"></span><span data-bind="name"></span></a>
+    <nav aria-label="Sections">
+      <a href="#experience">experience</a>
+      <a href="#competitions">competitions</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#education">education</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <span class="status"><span class="dot" aria-hidden="true"></span>All systems operational</span>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="crumb">region: <span data-bind="region"></span> / vpc: portfolio / stack: prod</p>
+      <h1 data-bind="name"></h1>
+      <p class="title" data-bind="title"></p>
+      <p class="summary" data-bind="summary"></p>
+      <p class="actions">
+        <a class="btn primary" id="resume-link" href="#">Download resume</a>
+        <a class="btn" href="#contact">Contact</a>
+      </p>
+    </section>
+
+    <!-- The site map, drawn as an architecture diagram. Each tile links to a section. -->
+    <section class="diagram" aria-label="Site architecture">
+      <div class="flow">
+        <div class="box"><small>client</small>You</div>
+        <div class="wire" aria-hidden="true"></div>
+        <div class="box"><small>edge</small>CDN</div>
+        <div class="wire" aria-hidden="true"></div>
+        <div class="box"><small>ingress</small>Load balancer</div>
+      </div>
+      <div class="wire down" aria-hidden="true"></div>
+      <div class="vpc">
+        <span class="vpc-label">vpc 10.0.0.0/16</span>
+        <div class="tiles">
+          <a class="tile" href="#experience"><span class="ico c1">CM</span>compute<small>Experience</small></a>
+          <a class="tile" href="#competitions"><span class="ico c2">SH</span>security hub<small>Competitions</small></a>
+          <a class="tile" href="#projects"><span class="ico c3">CT</span>containers<small>Projects</small></a>
+          <a class="tile" href="#skills"><span class="ico c4">IA</span>iam<small>Skills</small></a>
+          <a class="tile" href="#education"><span class="ico c5">OS</span>object storage<small>Education</small></a>
+          <a class="tile" href="#contact"><span class="ico c6">AG</span>api gateway<small>Contact</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="svc">
+      <header class="svc-head"><span class="ico c1">CM</span><div><p class="kicker">compute / instances</p><h2>Experience</h2></div></header>
+      <div class="grid" id="experience-list"></div>
+    </section>
+
+    <section id="competitions" class="svc">
+      <header class="svc-head"><span class="ico c2">SH</span><div><p class="kicker">security hub / event log</p><h2>Cyber competitions</h2></div></header>
+      <ol class="log" id="competitions-list"></ol>
+    </section>
+
+    <section id="projects" class="svc">
+      <header class="svc-head"><span class="ico c3">CT</span><div><p class="kicker">containers / deployments</p><h2>Projects</h2></div></header>
+      <div class="grid" id="projects-list"></div>
+    </section>
+
+    <section id="skills" class="svc">
+      <header class="svc-head"><span class="ico c4">IA</span><div><p class="kicker">iam / policies / skills-policy.json</p><h2>Skills</h2></div></header>
+      <pre class="code" id="skills-policy"></pre>
+    </section>
+
+    <section id="education" class="svc">
+      <header class="svc-head"><span class="ico c5">OS</span><div><p class="kicker">object storage / buckets</p><h2>Education &amp; certifications</h2></div></header>
+      <div class="grid two">
+        <div class="panel"><p class="bucket">bucket://education</p><ul class="objects" id="education-list"></ul></div>
+        <div class="panel"><p class="bucket">bucket://certifications</p><ul class="objects" id="cert-list"></ul></div>
+      </div>
+    </section>
+
+    <section id="contact" class="svc">
+      <header class="svc-head"><span class="ico c6">AG</span><div><p class="kicker">api gateway / routes</p><h2>Contact</h2></div></header>
+      <ul class="routes" id="contact-list"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>&copy; <span id="year"></span> <span data-bind="name"></span></span>
+    <span>last deploy: <span id="deployed"></span></span>
+  </footer>
+</body>
+</html>
