@@ -6,7 +6,7 @@ window.SITE = {
   region: "home-01",
   summary:
     "Student focused on cloud infrastructure and security. I build things, break things in competitions, and write it all down.",
-  resumeUrl: "", // drop your PDF next to index.html (e.g. "resume.pdf") to show the download button
+  resumeUrl: "William_Zahradnik_Resume.pdf", // drop your PDF next to index.html to show the download button
 
   experience: [
     {
@@ -16,10 +16,10 @@ window.SITE = {
       start: "May 2026",
       end: "Present",
       bullets: [
-        "Build and automate workshop environments with Ansible, hosted on Kubernetes clusters on CCSO's on-premises server, keeping environments consistent and reproducible for members.",
-        "Deploy Kubernetes alongside Authentik SSO to manage authentication on CCSO's public-facing web server, enabling secure member sign-in to workshops and the website.",
+        "Build and automate workshop environments with Ansible, deployed on Kubernetes clusters on CCSO's on-premises server for 50+ members.",
+        "Deployed Authentik for single sign-on (SSO) and centralized identity and access management across CCSO's public-facing web server and workshops.",
       ],
-      tags: ["Ansible", "Kubernetes", "Authentik", "SSO"],
+      tags: ["Ansible", "Kubernetes", "Authentik", "SSO", "IAM"],
     },
     {
       role: "Learning Assistant, Cyber 100",
@@ -29,8 +29,8 @@ window.SITE = {
       end: "Present",
       bullets: [
         "Support instruction for an introductory cybersecurity course covering security principles, networking and systems fundamentals.",
-        "Hold regular office hours to help students troubleshoot coursework and reinforce lecture material.",
-        "Work with the instructor to update course materials and labs.",
+        "Hold regular office hours to help 90+ students troubleshoot coursework and reinforce lecture material.",
+        "Work with the instructor to update course materials and lab exercises.",
       ],
       tags: ["Teaching", "Networking", "Security fundamentals"],
     },
@@ -41,9 +41,9 @@ window.SITE = {
       start: "Summer 2025",
       end: "Summer 2026",
       bullets: [
-        "Ran needs assessments and research for cybersecurity protocol implementation at DC non-profits including Freshfarm and Iona, grounding recommendations in the NIST CSF.",
-        "Facilitated daily meetings with stakeholders to gather feedback and verify project requirements.",
-        "Delivered a final proposal and presentation to the board of directors, securing $1,000 in implementation funding.",
+        "Led needs assessment and research for cybersecurity protocol implementation at two DC non-profits, Freshfarm and Iona, grounding recommendations in the NIST CSF to structure risk identification and control selection.",
+        "Facilitated daily meetings with stakeholders to gather feedback and confirm project requirements for a team of 12.",
+        "Presented a final security proposal to the board of directors and secured $1,000 in implementation funding.",
       ],
       tags: ["NIST CSF", "Risk assessment", "Consulting"],
     },
@@ -51,19 +51,19 @@ window.SITE = {
 
   competitions: [
     {
+      name: "NCAE Cyber Games",
+      date: "2026-2",
+      result: "6th / 12",
+      role: "Infrasturcture Specialist",
+      details: "Coordinated with teammates to triage and prioritize defense efforts across the infrastructure, owning the core router that enabled all machine scoring and external network access for the team. Applied router configuration skills in CentOS and MikroTik, including static IP setup, port-forwarding, and firewall rules, to maintain team infrastructure stability under active red-team pressure.",
+    },
+    {
       name: "Department of Energy CyberForce Competition",
       date: "2025-11",
       result: "16th / 100",
       role: "Incident Response Team Member · Penn State CCSO · Chicago, IL",
       details:
-        "Investigated a simulated breach at an oil facility and drafted client-ready recommendations. Monitored and responded to live attacks on Linux machines through Elastic SIEM, then wrote the incident report delivered to the red team. Highest finish ever recorded by a CCSO second team.",
-    },
-    {
-      name: "FIRST Robotics Competition",
-      date: "2021",
-      result: "Champs qualifier",
-      role: "Team member",
-      details: "Qualified for the FIRST Robotics Competition Championships.",
+        "Investigated a simulated breach at an oil facility, scoping the incident and setting recovery priorities before drafting client-ready recommendations. Monitored and responded to live attacks on Linux hosts using Elastic SIEM, then compiled findings into a full incident report. Highest finish ever recorded by a CCSO second team.",
     },
   ],
 
@@ -114,7 +114,7 @@ window.SITE = {
     Security: ["Elastic SIEM", "Incident response", "NIST CSF", "Risk assessment", "IAM / SSO", "Security policy"],
     Infrastructure: ["Linux", "Docker", "Kubernetes", "Ansible"],
     Networking: ["Wireshark", "Cisco Packet Tracer", "RIP", "OSPF/BGP (studying)"],
-    Languages: ["Python"],
+    Languages: ["Python", "Java", "C"],
     Professional: ["Leadership", "Communication", "Technical writing"],
   },
 
@@ -134,8 +134,8 @@ window.SITE = {
   ],
 
   certifications: [
+    { name: "AWS Certified Cloud Practitioner (CLF-C02)", year: "Exp. Dec 2026" },
     { name: "CompTIA Security+ (SY0-701)", year: "Oct 2026" },
-    { name: "Google Cybersecurity Professional Certificate", year: "" },
   ],
 
   contact: [
