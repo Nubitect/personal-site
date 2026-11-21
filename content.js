@@ -1,90 +1,146 @@
 // All site content lives here. Edit this file only; main.js renders it.
 // Leave a field as "" or [] to hide it.
 window.SITE = {
-  name: "Your Name",
-  title: "Cloud & Security Engineer",
+  name: "William Zahradnik",
+  title: "Cybersecurity Operations Student",
   region: "home-01",
   summary:
-    "Student / engineer focused on cloud infrastructure and security. I build things, break things in competitions, and write it all down.",
-  resumeUrl: "resume.pdf", // drop your PDF next to index.html
+    "Student focused on cloud infrastructure and security. I build things, break things in competitions, and write it all down.",
+  resumeUrl: "", // drop your PDF next to index.html (e.g. "resume.pdf") to show the download button
 
   experience: [
     {
-      role: "Cloud Engineering Intern",
-      org: "Company Name",
-      location: "City, ST",
-      start: "May 2025",
+      role: "Cloud Systems Administrator",
+      org: "Competitive Cybersecurity Organization (CCSO)",
+      location: "University Park, PA",
+      start: "May 2026",
       end: "Present",
       bullets: [
-        "Migrated X workloads to containers, cutting deploy time from 40 to 5 minutes.",
-        "Wrote Terraform modules for VPC, IAM and logging used by 6 teams.",
+        "Build and automate workshop environments with Ansible, hosted on Kubernetes clusters on CCSO's on-premises server, keeping environments consistent and reproducible for members.",
+        "Deploy Kubernetes alongside Authentik SSO to manage authentication on CCSO's public-facing web server, enabling secure member sign-in to workshops and the website.",
       ],
-      tags: ["AWS", "Terraform", "Kubernetes"],
+      tags: ["Ansible", "Kubernetes", "Authentik", "SSO"],
     },
     {
-      role: "IT Security Assistant",
-      org: "University IT",
-      location: "City, ST",
-      start: "Sep 2023",
-      end: "May 2025",
-      bullets: ["Triaged SIEM alerts and hardened 200+ endpoints."],
-      tags: ["Splunk", "Linux", "Windows"],
+      role: "Learning Assistant, Cyber 100",
+      org: "Penn State, College of IST",
+      location: "University Park, PA",
+      start: "Aug 2026",
+      end: "Present",
+      bullets: [
+        "Support instruction for an introductory cybersecurity course covering security principles, networking and systems fundamentals.",
+        "Hold regular office hours to help students troubleshoot coursework and reinforce lecture material.",
+        "Work with the instructor to update course materials and labs.",
+      ],
+      tags: ["Teaching", "Networking", "Security fundamentals"],
+    },
+    {
+      role: "Lead Intern",
+      org: "Leadership Initiatives",
+      location: "Washington, DC",
+      start: "Summer 2025",
+      end: "Summer 2026",
+      bullets: [
+        "Ran needs assessments and research for cybersecurity protocol implementation at DC non-profits including Freshfarm and Iona, grounding recommendations in the NIST CSF.",
+        "Facilitated daily meetings with stakeholders to gather feedback and verify project requirements.",
+        "Delivered a final proposal and presentation to the board of directors, securing $1,000 in implementation funding.",
+      ],
+      tags: ["NIST CSF", "Risk assessment", "Consulting"],
     },
   ],
 
   competitions: [
     {
-      name: "Collegiate Cyber Defense Competition — Regionals",
-      date: "2025-03",
-      result: "1st place",
-      role: "Team captain, Linux lead",
-      details: "Defended a corporate network against a live red team.",
+      name: "Department of Energy CyberForce Competition",
+      date: "2025-11",
+      result: "16th / 100",
+      role: "Incident Response Team Member · Penn State CCSO · Chicago, IL",
+      details:
+        "Investigated a simulated breach at an oil facility and drafted client-ready recommendations. Monitored and responded to live attacks on Linux machines through Elastic SIEM, then wrote the incident report delivered to the red team. Highest finish ever recorded by a CCSO second team.",
     },
     {
-      name: "National Cyber League — Spring",
-      date: "2024-04",
-      result: "Top 5%",
-      role: "Individual",
-      details: "",
+      name: "FIRST Robotics Competition",
+      date: "2021",
+      result: "Champs qualifier",
+      role: "Team member",
+      details: "Qualified for the FIRST Robotics Competition Championships.",
     },
   ],
 
   projects: [
     {
-      name: "homelab-k8s",
-      description: "Three-node k3s cluster with GitOps, monitoring and automated TLS.",
-      tags: ["k3s", "ArgoCD", "Prometheus"],
-      repo: "https://github.com/you/homelab-k8s",
+      name: "ccso-workshop-infra",
+      description:
+        "Ansible-automated workshop environments running on CCSO's on-prem Kubernetes clusters, with Authentik SSO for member sign-in.",
+      tags: ["Ansible", "Kubernetes", "Authentik"],
+      repo: "",
       demo: "",
     },
     {
-      name: "ctf-writeups",
-      description: "Write-ups for web, pwn and forensics challenges.",
-      tags: ["Python", "Ghidra"],
-      repo: "https://github.com/you/ctf-writeups",
+      name: "campus-network-sim",
+      description:
+        "Simulated an 8-router campus network in Cisco Packet Tracer: addressing, forwarding paths and redundant links with RIP failover. Traced ARP and gateway forwarding in Wireshark to separate Layer 2 delivery from Layer 3 routing.",
+      tags: ["Packet Tracer", "Wireshark", "RIP", "Routing & switching"],
+      repo: "",
+      demo: "",
+    },
+    {
+      name: "aliquippa-risk-assessment",
+      description:
+        "Risk assessment and best-practice response report on the 2023 IRGC attack on the Municipal Water Authority of Aliquippa, PA.",
+      tags: ["Risk assessment", "Critical infrastructure", "Technical writing"],
+      repo: "",
+      demo: "",
+    },
+    {
+      name: "hipaa-infra-proposal",
+      description:
+        "Proposal for infrastructure security measures in HIPAA-regulated healthcare, focused on network segmentation and IoT device management.",
+      tags: ["HIPAA", "Network segmentation", "IoT"],
+      repo: "",
+      demo: "",
+    },
+    {
+      name: "personal-site",
+      description: "This site: a static portfolio themed as a cloud architecture console.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      repo: "https://github.com/Nubitect/personal-site",
       demo: "",
     },
   ],
 
   // Rendered as an IAM-style policy: each key becomes one statement.
   skills: {
-    Languages: ["Python", "Go", "Bash", "SQL"],
-    Cloud: ["AWS", "Azure", "Terraform", "Docker", "Kubernetes"],
-    Security: ["Incident response", "Linux hardening", "Wireshark", "Burp Suite"],
+    Security: ["Elastic SIEM", "Incident response", "NIST CSF", "Risk assessment", "IAM / SSO", "Security policy"],
+    Infrastructure: ["Linux", "Docker", "Kubernetes", "Ansible"],
+    Networking: ["Wireshark", "Cisco Packet Tracer", "RIP", "OSPF/BGP (studying)"],
+    Languages: ["Python"],
+    Professional: ["Leadership", "Communication", "Technical writing"],
   },
 
   education: [
-    { school: "University Name", degree: "B.S. Computer Science", when: "2022 – 2026", note: "Minor in Cybersecurity" },
+    {
+      school: "The Pennsylvania State University · College of IST",
+      degree: "B.S. Cybersecurity Analytics and Operations",
+      when: "Current",
+      note: "Minors in Economics and Politics & Public Policy · GPA 3.92/4.00 · Dean's List Fall '25, Spring '26",
+    },
+    {
+      school: "DC International School",
+      degree: "IB Diploma & Career Program Certificate",
+      when: "",
+      note: "GPA 4.46/5.00",
+    },
   ],
 
   certifications: [
-    { name: "AWS Certified Solutions Architect – Associate", year: "2025" },
-    { name: "CompTIA Security+", year: "2024" },
+    { name: "CompTIA Security+ (SY0-701)", year: "Oct 2026" },
+    { name: "Google Cybersecurity Professional Certificate", year: "" },
   ],
 
   contact: [
-    { label: "email", href: "mailto:you@example.com", text: "you@example.com" },
-    { label: "github", href: "https://github.com/you", text: "github.com/you" },
-    { label: "linkedin", href: "https://linkedin.com/in/you", text: "linkedin.com/in/you" },
+    { label: "email", href: "mailto:wrz5020@psu.edu", text: "wrz5020@psu.edu" },
+    { label: "linkedin", href: "https://www.linkedin.com/in/william-zahradnik", text: "linkedin.com/in/william-zahradnik" },
+    { label: "github", href: "https://github.com/Nubitect", text: "github.com/Nubitect" },
   ],
 };
