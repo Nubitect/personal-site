@@ -67,9 +67,11 @@ window.SITE = {
     },
   ],
 
+  // category: "network" (network design), "papers" or "personal" (personal development)
   projects: [
     {
       name: "ccso-workshop-infra",
+      category: "personal",
       description:
         "Ansible-automated workshop environments running on CCSO's on-prem Kubernetes clusters, with Authentik SSO for member sign-in.",
       tags: ["Ansible", "Kubernetes", "Authentik"],
@@ -78,6 +80,7 @@ window.SITE = {
     },
     {
       name: "campus-network-sim",
+      category: "network",
       description:
         "Simulated an 8-router campus network in Cisco Packet Tracer: addressing, forwarding paths and redundant links with RIP failover. Traced ARP and gateway forwarding in Wireshark to separate Layer 2 delivery from Layer 3 routing.",
       tags: ["Packet Tracer", "Wireshark", "RIP", "Routing & switching"],
@@ -86,6 +89,7 @@ window.SITE = {
     },
     {
       name: "aliquippa-risk-assessment",
+      category: "papers",
       description:
         "Risk assessment and best-practice response report on the 2023 IRGC attack on the Municipal Water Authority of Aliquippa, PA.",
       tags: ["Risk assessment", "Critical infrastructure", "Technical writing"],
@@ -94,6 +98,7 @@ window.SITE = {
     },
     {
       name: "hipaa-infra-proposal",
+      category: "papers",
       description:
         "Proposal for infrastructure security measures in HIPAA-regulated healthcare, focused on network segmentation and IoT device management.",
       tags: ["HIPAA", "Network segmentation", "IoT"],
@@ -102,6 +107,7 @@ window.SITE = {
     },
     {
       name: "personal-site",
+      category: "personal",
       description: "This site: a static portfolio themed as a cloud architecture console.",
       tags: ["HTML", "CSS", "JavaScript"],
       repo: "https://github.com/Nubitect/personal-site",
@@ -114,7 +120,7 @@ window.SITE = {
     Security: ["Elastic SIEM", "Incident response", "NIST CSF", "Risk assessment", "IAM / SSO", "Security policy"],
     Infrastructure: ["Linux", "Docker", "Kubernetes", "Ansible"],
     Networking: ["Wireshark", "Cisco Packet Tracer", "RIP", "OSPF/BGP (studying)"],
-    Languages: ["Python", "Java", "C"],
+    Languages: ["Python", "Java", "C", "SQL"],
     Professional: ["Leadership", "Communication", "Technical writing"],
   },
 
@@ -123,7 +129,7 @@ window.SITE = {
       school: "The Pennsylvania State University · College of IST",
       degree: "B.S. Cybersecurity Analytics and Operations",
       when: "Current",
-      note: "Minors in Economics and Politics & Public Policy · GPA 3.92/4.00 · Dean's List Fall '25, Spring '26",
+      note: "Minors in Economics and Politics & Public Policy · GPA 3.92/4.00",
     },
     {
       school: "DC International School",
@@ -136,6 +142,18 @@ window.SITE = {
   certifications: [
     { name: "AWS Certified Cloud Practitioner (CLF-C02)", year: "Exp. Dec 2026" },
     { name: "CompTIA Security+ (SY0-701)", year: "Oct 2026" },
+  ],
+
+  honors: [
+    { name: "Dean's List", year: "Fall '25, Spring '26" },
+    { name: "FIRST Robotics Competition Championships qualifier", year: "2021" },
+  ],
+
+  // One entry per term, e.g. { term: "Fall 2025", courses: ["CYBER 100: Intro to Cybersecurity", "IST 140: Intro to Programming"] }
+  coursework: [
+    { term: "Fall 2026", courses: ["CYBER 262: Cyper-Defense Studio", "ECON 104: Introductory Macroeconomic Analysis and Policy", "IST 210: Organization of Data", "IST 220: Networking and Telecomunications"]},
+    { term: "Spring 2026", courses: ["ECON 302: Intermediate Microeconomic Analysis", "ENGL 15: Rhetoric and Composition", "IST 242: Intermediate and Object Oriented Application Development", "PLSC 1: American Politics", "STAT 200: Elementary Statistics"]},
+    { term: "Fall 2025", courses: ["CAS 100A: Effective Speach", "CYBER 100: Computer Systems Literacy", "ECON 102: Introductory Microeconomic Analysis and Policy", "IST 140: Introduction to Application Development", "SRA 111: Introduction to Securtity and Risk Analysis"]},
   ],
 
   contact: [

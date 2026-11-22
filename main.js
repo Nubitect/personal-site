@@ -13,7 +13,7 @@ const rid = (prefix, s) => {
 };
 const fill = (id, list, render) => {
   const el = document.getElementById(id);
-  if (!list || !list.length) return el.closest(".svc, .panel")?.setAttribute("hidden", "");
+  if (!list || !list.length) return el.closest(".group, .svc, .panel")?.setAttribute("hidden", "");
   el.innerHTML = list.map(render).join("");
 };
 
@@ -45,13 +45,16 @@ fill("competitions-list", S.competitions, (c) => `<li>
     <span class="result">${esc(c.result)}</span>
   </li>`);
 
-fill("projects-list", S.projects, (p) => `<article class="card">
+const project = (p) => `<article class="card">
     <div class="card-top"><code>${rid("svc", p.name)}</code><span class="state on">deployed</span></div>
     <h3 class="mono">${esc(p.name)}</h3>
     <p>${esc(p.description)}</p>
     <div class="tags">${tags(p.tags)}</div>
     <p class="links">${link(p.repo, "source")} ${link(p.demo, "live demo")}</p>
-  </article>`);
+  </article>`;
+for (const c of ["network", "papers", "personal"])
+  fill(`projects-${c}`, (S.projects || []).filter((p) => p.category === c), project);
+if (!S.projects?.length) document.getElementById("projects").hidden = true;
 
 // Skills as a syntax-highlighted IAM policy document.
 const str = (s) => `<span class="s">"${esc(s)}"</span>`;
@@ -67,7 +70,12 @@ fill("education-list", S.education, (e) =>
   `<li><span class="mono">${esc(e.when)}</span><div><strong>${esc(e.degree)}</strong><p class="meta">${esc(e.school)}${e.note ? " · " + esc(e.note) : ""}</p></div></li>`);
 fill("cert-list", S.certifications, (c) =>
   `<li><span class="mono">${esc(c.year)}</span><div><strong>${esc(c.name)}</strong></div></li>`);
-if (!S.education?.length && !S.certifications?.length) document.getElementById("education").hidden = true;
+fill("honors-list", S.honors, (h) =>
+  `<li><span class="mono">${esc(h.year)}</span><div><strong>${esc(h.name)}</strong></div></li>`);
+fill("coursework-list", S.coursework, (t) =>
+  `<li><span class="mono">${esc(t.term)}</span><ul class="courses">${(t.courses || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul></li>`);
+if (![S.education, S.certifications, S.honors, S.coursework].some((l) => l?.length))
+  document.getElementById("education").hidden = true;
 
 fill("contact-list", S.contact, (c) =>
   `<li><span class="verb">GET</span><code>/${esc(c.label)}</code><span class="arrow" aria-hidden="true">→</span>${link(c.href, c.text)}</li>`);
