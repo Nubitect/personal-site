@@ -35,7 +35,7 @@ window.SITE = {
       tags: ["Teaching", "Networking", "Security fundamentals"],
     },
     {
-      role: "Lead Intern",
+      role: "Lead Consulting Intern",
       org: "Leadership Initiatives",
       location: "Washington, DC",
       start: "Summer 2025",
@@ -47,6 +47,18 @@ window.SITE = {
       ],
       tags: ["NIST CSF", "Risk assessment", "Consulting"],
     },
+    {
+      role: "Lead Software Development Intern",
+      org: "Indie Co.",
+      location: "Falls Church, VA",
+      start: "June 2024",
+      end: "Aug 2024",
+      bullets: [
+        "Partnered with client stakeholders to define requirements and deliver an AI application using OpenAI’s API, enabling automated document analysis and natural-language interaction tailored to client workflows",
+        "Engineered extraction and analysis pipelines to surface relevant information from key document types in response to user queries; produced client-facing technical documentation for onboarding and long-term maintainability",
+      ],
+      tags: ["Python", "Back-End Web Development", "Project Management"]
+    }
   ],
 
   competitions: [

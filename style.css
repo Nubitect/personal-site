@@ -46,14 +46,14 @@ h1, h2, h3 { line-height: 1.2; margin: 0; }
 /* top bar */
 .topbar {
   position: sticky; top: 0; z-index: 10;
-  display: flex; align-items: center; gap: 24px;
+  display: flex; align-items: center; gap: 16px;
   padding: 12px 24px;
   background: color-mix(in srgb, var(--panel) 88%, transparent);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 600; }
-.logo { width: 18px; height: 18px; border: 2px solid var(--accent); border-radius: 4px; transform: rotate(45deg); }
+.brand { display: flex; align-items: center; gap: 4px; color: var(--text); font-weight: 600; }
+.logo { width: 40px; height: 20px; margin-left: -8px; }
 /* nav fills the bar's height (negative margin cancels .topbar padding) so the underline sits on its bottom edge */
 .topbar nav { display: flex; flex-wrap: wrap; align-self: stretch; margin: -12px 0; font: 13px var(--mono); }
 .topbar nav a { display: flex; align-items: center; padding: 0 12px; color: var(--muted); }
