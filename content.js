@@ -157,6 +157,9 @@ window.SITE = {
   ],
 
   honors: [
+    { name: "Kuhner Renaissance Scholarship", year: "2026-2027"},
+    { name: "B&P Atkinson Trustee Schp IST", year: "2026-2027"},
+    { name: "Jubelirer Trustee Scholarship", year: "2025-2026"},
     { name: "Dean's List", year: "Fall '25, Spring '26" },
     { name: "FIRST Robotics Competition Championships qualifier", year: "2021" },
   ],
