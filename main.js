@@ -50,6 +50,7 @@ const project = (p) => `<article class="card">
     <h3 class="mono">${esc(p.name)}</h3>
     <p>${esc(p.description)}</p>
     <div class="tags">${tags(p.tags)}</div>
+    ${p.pdf ? `<p class="actions"><a class="btn" href="${esc(p.pdf)}" target="_blank" rel="noopener">Read paper (PDF)</a></p>` : ""}
     <p class="links">${link(p.repo, "source")} ${link(p.demo, "live demo")}</p>
   </article>`;
 for (const c of ["network", "papers", "personal"])

@@ -80,6 +80,7 @@ window.SITE = {
   ],
 
   // category: "network" (network design), "papers" or "personal" (personal development)
+  // pdf: path to the paper (e.g. "papers/name.pdf"); shows a "Read paper" button
   projects: [
     {
       name: "ccso-workshop-infra",
@@ -105,6 +106,7 @@ window.SITE = {
       description:
         "Risk assessment and best-practice response report on the 2023 IRGC attack on the Municipal Water Authority of Aliquippa, PA.",
       tags: ["Risk assessment", "Critical infrastructure", "Technical writing"],
+      pdf: "papers/aliquippa-risk-assessment.pdf",
       repo: "",
       demo: "",
     },
@@ -114,6 +116,7 @@ window.SITE = {
       description:
         "Proposal for infrastructure security measures in HIPAA-regulated healthcare, focused on network segmentation and IoT device management.",
       tags: ["HIPAA", "Network segmentation", "IoT"],
+      pdf: "papers/hipaa-infra-proposal.pdf",
       repo: "",
       demo: "",
     },
